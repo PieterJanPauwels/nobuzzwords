@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/grayscale.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="crossorigin=""/>
 
   </head>
 
@@ -51,12 +52,12 @@
 
     <!-- Intro Header -->
     <header class="masthead">
-      <div class="intro-body">
+        <div class="intro-body">
         <div class="container">
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <h1 class="brand-heading">Ghent</h1>
-              <p class="intro-text">Welcome to No Buzzwords Ghent. We made this webpage as a small guerilla intervention to explain how we see Smart Cities as a concept. Feel free to read our short manifesto on how we really view Ghent as a smart city: a city of people. Or just download our digital version of the buzzwords bingo below. Your choice. </p>
+              <p class="intro-text">Welcome to No Buzzwords Ghent. We made this webpage for SCWE as a small guerilla intervention to explain how we see Smart Cities as a concept. Feel free to read our short manifesto on how we really view Ghent as a smart city: a city of people. Or just download our digital version of the buzzwords bingo <a href="#download">below</a>. Your choice. </p>
               <a href="#about" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
               </a>
@@ -71,7 +72,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>Ghent, a 'City of People'</h2>
+            <h2>Ghent, a City of People</h2>
             <p>A genuine smart city starts from its proper DNA, the knowledge of the city, the society and the stakeholders</p>
             <p>Every city, every town is different. Therefore there is no single ‘smart city’. In pursuing this ambition, we must try to answer the question of how the city will look in the future. Every town or city should follow a proper trajectory and will constantly have to reinvent itself.</p>
             <p>To formulate this answer, it is important to start from the current social challenges. But we should not forget to cherish sufficient ambition and start looking for solutions to cope with tomorrow’s challenges.</p>
@@ -90,7 +91,7 @@
         <div class="col-lg-8 mx-auto">
           <h2>Download the Smart City Buzzwords Bingo</h2>
           <p>Need a new bingo sheet or want to share it digitaly with colleagues and other SCWE visitors? Feel free to download it.</p>
-          <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+          <a href="https://drive.google.com/file/d/1qh4J_Og6RUPq_1tiyPUE3Df_DTANY-Jh/view?usp=sharing" class="btn btn-default btn-lg">Download Bingosheet.pdf</a>
         </div>
       </div>
     </section>
@@ -130,7 +131,9 @@
     </section>
 
     <!-- Map Section -->
-    <div id="map"></div>
+    <div id="mapid">
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar'}).addTo(map);
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -147,7 +150,7 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+   <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="crossorigin=""></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
