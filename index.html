@@ -20,7 +20,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/grayscale.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="crossorigin=""/>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
+
 
   </head>
 
@@ -72,14 +74,13 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>Ghent, a City of People</h2>
-            <p>A genuine smart city starts from its proper DNA, the knowledge of the city, the society and the stakeholders</p>
-            <p>Every city, every town is different. Therefore there is no single ‘smart city’. In pursuing this ambition, we must try to answer the question of how the city will look in the future. Every town or city should follow a proper trajectory and will constantly have to reinvent itself.</p>
-            <p>To formulate this answer, it is important to start from the current social challenges. But we should not forget to cherish sufficient ambition and start looking for solutions to cope with tomorrow’s challenges.</p>
-            <h6>"In Ghent, the focus lies on the human component in the city of the future. Smart cities cannot exist without their smart citizens"</h6>
-            <p>This model of a smart city reconnects people with their environment and the city, thus creating more efficient and optimal relationships between the available means, technology, communities, services and events in the urban environment. Connecting people also involves that citizens once again become responsible for their environment.</p>
-            <p>In Ghent, we summarize this as inclusive, innovative and sustainable. The Ghent Municipality, companies, research institutions and citizens alike are uniting themselves to optimize the opportunities and the challenges of the knowledge and information society.</p>
-            <p>We consider data to be a strategic asset, as substructure for the processes and decisions in the smart city, in which the citizen is the actor who is the first to define urban life. That is why we use the Ghent dialect ‘wise city’ as an alternative translation for ‘smart city’.</p>
+            <h2>Ghent: a "City of People", OUR city!</h2>
+            <p>Ever walk around a city and wondered what makes it tick? Why is it so different from others? Why is Ghent so rebellious? </p>
+            <p>Every city has it’s own beat, vibe, feeling...  We should not try to conform to one city manual or ideal but evolve in accordance to our own DNA, history, data and stakeholders. We have no ambition in Ghent to become a smart city, this buzzword has become meaningless. We want to keep evolving in function of the future we determine. Which future do we want to see for Ghent? And no we will never arrive and keep on adapting and changing.</p>
+            <p>Every location has specific challenges and is confronted with wicked problems. Choices, priorities and future ambitions are chosen within the communities. These are the basis of a common vision. "In Ghent, the focus lies on US in the city of the future. Smart cities cannot exist without their smart citizens", no boasting intended but if we use buzzwords best go all the way </p>
+            <h6>Our model of a future city puts us back in the centre of our environment and the city,  creating more efficient and optimal links between the available means, technology, communities, services and events in the urban environment. All these links also mean that we, as citizens of Ghent, no longer watch and wait for our governments but are empowered to take up our own responsibility for our environment.</h6>
+            <p>In Ghent, we summarize this as inclusive, innovative and sustainable (buzzwordalert: we will have to find a more concrete word). We are uniting within the Ghent Municipality, companies, research institutions to optimize the opportunities and the challenges of the knowledge and information society.</p>
+            <p>We used to hear people say: “Knowledge is power”, but we actually believe data is actually the key. We consider data to be a strategic asset, as basis for the processes and decisions in the smart city, in which we are no longer users but actors in defining the urban life. Shall we dare call ourselves a “Wijze stad”, (literally translated wise city)? Why not?</p>
           </div>
         </div>
       </div>
@@ -134,14 +135,26 @@
     </section>
 
     <!-- Map Section -->
-    <div id="mapid">
-        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar'}).addTo(map);
-    </div>
+    <div id='map' style='height: 400px;'></div>
+      <script>
+          mapboxgl.accessToken = 'pk.eyJ1IjoicGpwYXV3ZWxzIiwiYSI6IkdOcVFTOUEifQ.z4IwGSGTLcBACdVisWsYdw';
+          var map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/pjpauwels/cigxe5ui3000cb8lw9tdr32gf'
+          });
+          // Add zoom and rotation controls to the map.
+          map.addControl(new mapboxgl.NavigationControl());
+          
+          // disable map zoom when using scroll
+          map.scrollZoom.disable();
+      </script>
 
     <!-- Footer -->
     <footer>
       <div class="container text-center">
-        <p>Copyright &copy; Your Website 2017</p>
+          <p>Website by Digipolis Gent, based on the Open Source Bootstrap Theme <a href="https://github.com/BlackrockDigital/startbootstrap-grayscale"> GrayScale</a></p>
+          <p>Hero Image CC-BY-SA 3.0 by <a href="https://commons.wikimedia.org/wiki/File:Saint_Nicholas_Church_in_Ghent.jpg">Teseum</a></p>
+          <p>Second image Copyrighted by <a href="https://beeldbank.stad.gent">Stad Gent</a></p>
       </div>
     </footer>
 
